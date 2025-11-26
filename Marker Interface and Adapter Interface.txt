@@ -1,0 +1,47 @@
+if an interface doesn't contain any methods and implementation that interface in our objects will get some ability such type of interfaces are called marker interface or ability interface or tag interface
+
+example
+=======
+serializable
+clonable
+RandomAccesses
+
+without having any methods in marker interface how objects will get some ability?
+---------------------------------------------------------------------------------
+internally JVM is responsible to provide required ability.
+
+why JVM is providing required ability in marker interface?
+------------------------------------------------------------
+to reduce complexity of the programming
+
+Adapter Pattern
+===============
+The adapter pattern allows incompatible interfaces to work together. it acts as bridge between two incompatable interfaces.
+
+abstract class vs interface
+===========================
+1. if we dont know about implementation just we have requirement specification then we should go for interface.
+
+if we are talking about implementation but not completely(partial implementation) then we should go for abstract class.
+
+2. inside interface every method is always public and abstract whether we are declaring or not.
+
+every method present inside abstract class need not be public and abstract.
+
+3. inside interface every variable is always public, static final variable whether we are declaring or not.
+
+inside abstract class variables need not be public static final
+
+4. inside interface we can't take static and instance blocks
+   inside abstract class we can take both static and instance blocks.
+
+5. inside interface we can't take constructor.
+   inside abstract class we can take constructor.
+
+6. for the interface variable compulsory we perform initlialization at the time of declaration otherwise we will get compiletime error.
+
+it is not required to perform  initialization for abstract class variables at the time of declaration.
+
+we cant create Object for abstract class but abstract class can contain constructor what is the need?
+------------------------------------------------------------------------------------------------------
+abstract class constructor will be executed when ever we are creating child class Object to perform initialization of child object
